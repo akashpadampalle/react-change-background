@@ -1,5 +1,5 @@
 import './App.css'
-import Button from './Button';
+import { ThemeButton } from './Button';
 import { useState } from 'react'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className={`app-container ${theme}`}>
-      <Button changeTheme={changeTheme} />
+      <ThemeButton theme={theme} changeTheme={changeTheme} />
     </div>
   );
 }

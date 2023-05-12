@@ -1,8 +1,17 @@
 .button {
   padding: 10px;
   border-radius: 5px;
-  background: white;
   box-shadow: 0 0 10px gainsboro;
   font-size: 1.2rem;
   border: 0px;
+}
+
+.dark-button {
+  color: white;
+  background: gray;
+}
+
+.light-button {
+  color: black;
+  background: white;
 }
