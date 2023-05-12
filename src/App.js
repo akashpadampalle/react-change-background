@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Button from './Button';
+import { useState } from 'react'
 
 function App() {
+
+  const [theme, setTheme] = useState("dark-theme")
+
+  const changeTheme = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app-container ${theme}`}>
+      <Button changeTheme={changeTheme} />
     </div>
   );
 }
